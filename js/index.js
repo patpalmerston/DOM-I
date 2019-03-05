@@ -43,13 +43,24 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+const newA = document.createElement('a');
+newA.textContent = 'Funtime';
+
+
+const newB = document.createElement('a');
+newB.textContent = 'Happy Place';
+
+
 const navigation = document.querySelector('nav');
+navigation.append(newA);
+navigation.append(newB);
+// navigation.prepend(newB);
 navigation.children[0].textContent = 'Services';
 navigation.children[1].textContent = 'Product';
 navigation.children[2].textContent = 'Vision';
 navigation.children[3].textContent = 'Features';
 navigation.children[4].textContent = 'About';
-navigation.children[0].textContent = 'Contact';
+navigation.children[5].textContent = 'Contact';
 
 
 const ctaHeader = document.querySelector('.cta-text h1')
@@ -87,4 +98,9 @@ middleImg.setAttribute('src', "img/mid-page-accent.jpg");
 
 const myFooter = document.querySelector('footer')
 myFooter.textContent = "Copyright Great Idea! 2018";
+
+const newNav = document.querySelectorAll('a');
+newNav.forEach( function( x ){
+  x.style.color = 'green';
+});
 
